@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVolt - Find Stations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadStationsPage()">
+  <header>
+    <div class="logo-title">⚡ EVolt</div>
+    <nav>
+      <a href="stations.html" class="active">Stations</a>
+      <a href="dashboard.html">Dashboard</a>
+      <span>User: <strong id="display-user"></strong></span>
+      <button class="btn-logout" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Charging Stations</h1>
+    <p class="page-subtitle">Live availability updates. Select a station to view chargers.</p>
+
+    <div class="filter-group">
+      <input type="text" id="search-input" placeholder="Search station or location..." oninput="loadStationsPage()">
+      <select id="type-filter" onchange="loadStationsPage()">
+        <option value="">All Types</option>
+        <option value="AC & DC Fast">AC & DC Fast</option>
+        <option value="DC Fast">DC Fast</option>
+        <option value="DC Ultra Fast">DC Ultra Fast</option>
+      </select>
+    </div>
+
+    <div id="stations-list" class="grid"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

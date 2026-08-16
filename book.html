@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVolt - Select Charger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadBookingPage()">
+  <header>
+    <div class="logo-title">⚡ EVolt</div>
+    <nav>
+      <a href="stations.html">Stations</a>
+      <a href="dashboard.html">Dashboard</a>
+      <span>User: <strong id="display-user"></strong></span>
+      <button class="btn-logout" onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <button class="btn-outline-green" style="width: auto; margin-bottom: 1rem;" onclick="window.location.href='stations.html'">← Back to stations</button>
+    
+    <h1 class="page-title" id="station-title">Station Details</h1>
+    <p class="page-subtitle" id="station-subtitle">Location Address</p>
+
+    <div id="chargers-container" class="grid"></div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal-overlay">
+      <div class="modal-content">
+        <h3>Book <span id="selected-charger-label"></span></h3>
+        <form onsubmit="submitBooking(event)" class="form-stack">
+          <input type="hidden" id="modal-station-id">
+          <input type="hidden" id="modal-charger-name">
+          <label>Date: <input type="date" id="book-date" required></label>
+          <label>Time: <input type="time" id="book-time" required></label>
+          <label>Duration: 
+            <select id="book-duration" required>
+              <option value="1">1 Hour</option>
+              <option value="2">2 Hours</option>
+              <option value="3">3 Hours</option>
+              <option value="4">4 Hours</option>
+            </select>
+          </label>
+          <label>Vehicle Info: <input type="text" id="book-vehicle" placeholder="e.g. Tata Nexon EV" required></label>
+          <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button type="submit" class="btn-green">Confirm Booking</button>
+            <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV PowerGrid - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ EV PowerGrid Portal</h1>
+  </header>
+
+  <main class="container">
+    <section class="card central-card">
+      <h2>Account Access</h2>
+      <div class="form-stack">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <div class="btn-group">
+          <button onclick="login()">Login</button>
+          <button class="btn-secondary" onclick="register()">Register</button>
+        </div>
+      </div>
+      <p id="auth-msg" class="message-text"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
