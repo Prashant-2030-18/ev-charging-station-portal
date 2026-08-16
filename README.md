@@ -41,3 +41,41 @@ A full-stack web application designed to help Electric Vehicle (EV) owners locat
 │   └── app.js               # Frontend application logic
 ├── package.json             # Node dependencies and scripts
 └── README.md                # Project documentation
+
+```markdown
+## ⚙️ Setup & Installation
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v16 or higher) installed on your system.
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/YOUR_USERNAME/ev-powergrid-portal.git](https://github.com/YOUR_USERNAME/ev-powergrid-portal.git)
+cd ev-powergrid-portal
+
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Start the Backend Server
+
+```bash
+npm start
+
+```
+
+> The server will run at `http://localhost:5000`.
+
+### 4. Open the Frontend
+
+* Open `frontend/index.html` directly in your browser.
+* *Or* use the **Live Server** extension in Visual Studio Code to serve the `frontend` folder (`http://127.0.0.1:5500/frontend/index.html`).
+
+```
+
+```
